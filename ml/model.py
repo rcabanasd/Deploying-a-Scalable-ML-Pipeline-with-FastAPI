@@ -23,7 +23,7 @@ def train_model(X_train, y_train):
     """
     model = RandomForestClassifier(n_estimators = 100, random_state = 42)
     model.fit(X_train,y_train)
-    retun model
+    return model
 
 
 def compute_model_metrics(y, preds):
@@ -132,6 +132,6 @@ def performance_on_categorical_slice(
     )
 
     preds = inference(model, X_slice)
-    
+
     precision, recall, fbeta = compute_model_metrics(y_slice, preds)
     return precision, recall, fbeta
